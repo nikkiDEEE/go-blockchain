@@ -4,6 +4,13 @@ import (
 	"time"
 )
 
+type Product struct {
+	ProductID    string `json:"id"`
+	Name         string `json:"name"`
+	Manufacturer string `json:"manufacturer"`
+	Description  string `json:"description"`
+}
+
 type Event struct {
 	ProductID string    `json:"product_id"`
 	Timestamp time.Time `json:"timestamp`
