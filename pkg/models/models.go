@@ -13,18 +13,19 @@ type Product struct {
 
 type Event struct {
 	ProductID string    `json:"product_id"`
-	Timestamp time.Time `json:"timestamp`
+	Timestamp time.Time `json:"timestamp"`
+	IsGenesis bool 		`json:"is_genesis"`
 }
 
 type ManufacturingEvent struct {
 	Event
-	Manufacturer string `json:"manufacturer`
+	Manufacturer string `json:"manufacturer"`
 	Facility     string `json:"facility"`
 }
 
 type ShippingEvent struct {
 	Event
-	Transporter  string `json:"transporter`
+	Transporter  string `json:"transporter"`
 	PrevFacility string `json:"prev_facility"`
 	CurrFacility string `json:"curr_facility"`
 }
